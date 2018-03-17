@@ -25,4 +25,16 @@ export class DataService {
     // ──────────────────────────────────────────────────────────────── INSTAGRAM ─────
     //
 
+    //
+    // ─── YOUTUBE ────────────────────────────────────────────────────────────────────
+    //
+    public getYoutueSubCount() {
+        return this.http
+            .get('https://www.googleapis.com/youtube/v3/channels?part=statistics&forUsername=ClicheProductionsUK&fields=items/statistics/subscriberCount&key=' + keys.YOUTUBE_KEY)
+            .map(res => res.json());
+    }
+    //
+    // ────────────────────────────────────────────────────────────────── YOUTUBE ─────
+    //
+
 }

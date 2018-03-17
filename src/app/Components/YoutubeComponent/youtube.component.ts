@@ -11,9 +11,20 @@ export class YoutubeComponent implements OnInit {
     constructor(public dataService: DataService) { }
 
     youtube: String = 'Hello youtube';
+    currentSubscribers: String = '';
 
     ngOnInit() {
+        this.getSubscriberCount();
+    }
 
+    public getSubscriberCount() {
+        this.dataService.getYoutueSubCount().subscribe(res => {
+            this.currentSubscribers = res.items[0].statistics.subscriberCount;
+        });
+    }
+
+    public goToYoutube() {
+        window.open('https://www.youtube.com/user/ClicheProductionsUK', '_blank').focus();
     }
 
 }
