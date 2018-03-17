@@ -4,7 +4,9 @@
     <span (click)="openInstagram()" class="link-to-instagram">Go to my intagram.</span>
     <div class="image-container">
         <div class="single-image-container" *ngFor="let image of this.urls">
-            <img [src]="image.url" class="single-image" alt="recent instagram image">
+            <picture>
+                <img [src]="image.url" class="single-image img-thumbnail" alt="recent instagram image">
+            </picture>
         </div>
     </div>
 </div>
