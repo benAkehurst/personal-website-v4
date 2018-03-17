@@ -1,0 +1,29 @@
+.flex-container {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid green;
+    width: 100vw;
+    padding: 45px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.about-me-div {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    border: 1px solid red;
+    width: 34%;
+    height: 100px;
+}
+
+.information-div {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: stretch;
+    border: 1px solid yellow;
+    width: 66%;
+}
