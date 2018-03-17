@@ -6,17 +6,14 @@
 
 .about-me-div {
     float: left;
-    outline-style: solid;
-    outline-color: red;
     width: 33%;
     height: 100px;
 }
 
 .information-div {
-    outline-style: solid;
-    outline-color: yellow;
     width: 66%;
     float: right;
+    margin-top: 50px;
 }
 
 /* Create four equal columns that floats next to each other */

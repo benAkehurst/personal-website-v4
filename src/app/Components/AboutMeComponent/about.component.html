@@ -1,3 +1,26 @@
 <div class="about-main-container">
-    <h1>{{aboutTest}}</h1>
+    <div class="image-me-container">
+        <img class="image-me" src="./../../../assets/images/profilepic.jpg">
+    </div>
+    <div class="about-me-text">
+        <p>
+             Hello, I'm Ben Akehurst. I'm a Full Stack Web Developer. Scroll down to learn about me.
+        </p>
+    </div>
+    <div class="social-links">
+        <div class="social-btns">
+            <a class="btn github" (click)="goToGitHub()">
+                <i class="fa fa-github"></i>
+            </a>
+            <a class="btn instagram" (click)="goToInstagram()">
+                <i class="fa fa-instagram"></i>
+            </a>
+            <a class="btn youtube" (click)="goToYoutube()">
+                <i class="fa fa-youtube"></i>
+            </a>
+            <a class="btn linkedin" (click)="goToLinkedin()">
+                <i class="fa fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
 </div>
