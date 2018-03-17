@@ -5,7 +5,8 @@
     justify-content: flex-start;
     align-content: flex-start;
     align-items: flex-start;
-    border: 1px solid green;
+    outline-style: solid;
+    outline-color: green;
     width: 100vw;
     padding: 45px;
     font-family: 'Open Sans', sans-serif;
@@ -15,7 +16,8 @@
     order: 0;
     flex: 0 1 auto;
     align-self: auto;
-    border: 1px solid red;
+    outline-style: solid;
+    outline-color: red;
     width: 34%;
     height: 100px;
 }
@@ -24,6 +26,7 @@
     order: 0;
     flex: 0 1 auto;
     align-self: stretch;
-    border: 1px solid yellow;
+    outline-style: solid;
+    outline-color: yellow;
     width: 66%;
 }

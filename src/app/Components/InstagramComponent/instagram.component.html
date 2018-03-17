@@ -1,4 +1,10 @@
-<div>{{instagram}}
-
-    <span (click)="openInstagram()">OPEN</span>
+<div class="instagram-component-container">
+    <h2>Instagram</h2>
+    <span>One of my main hobbies is photography. I shoot on an iPhone SE & Canon 100d.</span>
+    <span (click)="openInstagram()" class="link-to-instagram">Go to my intagram.</span>
+    <div class="image-container">
+        <div class="single-image-container" *ngFor="let image of this.urls">
+            <img [src]="image.url" class="single-image" alt="recent instagram image">
+        </div>
+    </div>
 </div>

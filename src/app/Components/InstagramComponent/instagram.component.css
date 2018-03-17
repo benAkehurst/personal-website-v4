@@ -1,0 +1,21 @@
+.instagram-component-container {
+    width: 100%;
+}
+
+.link-to-instagram:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.image-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.single-image {
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+}

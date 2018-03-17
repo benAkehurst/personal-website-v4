@@ -22,7 +22,6 @@ export class InstagramComponent implements OnInit {
 
     public getInstagramPhotos() {
         this.dataService.getInstagramPhotos().subscribe(res => {
-            console.log(res);
             this.instagramUserName = res.graphql.user.username;
             this.twelveRecentImages = res.graphql.user.edge_owner_to_timeline_media.edges;
             this.getRecentImageUrls();
@@ -39,7 +38,6 @@ export class InstagramComponent implements OnInit {
                 'url' : i.node.display_url
             });
         });
-        console.log(this.urls);
     }
 
     public openInstagram() {
