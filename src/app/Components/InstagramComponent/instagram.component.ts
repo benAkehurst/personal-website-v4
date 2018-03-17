@@ -12,6 +12,7 @@ export class InstagramComponent implements OnInit {
     constructor(public dataService: DataService) { }
     errors: any;
     instagram: String = 'Hello instagram';
+    instagramUserName: String = '';
     twelveRecentImages: any[] = [];
     urls: Array<any> = [];
 
@@ -21,6 +22,8 @@ export class InstagramComponent implements OnInit {
 
     public getInstagramPhotos() {
         this.dataService.getInstagramPhotos().subscribe(res => {
+            console.log(res);
+            this.instagramUserName = res.graphql.user.username;
             this.twelveRecentImages = res.graphql.user.edge_owner_to_timeline_media.edges;
             this.getRecentImageUrls();
         },
@@ -37,5 +40,9 @@ export class InstagramComponent implements OnInit {
             });
         });
         console.log(this.urls);
+    }
+
+    public openInstagram() {
+        window.open('https://www.instagram.com/' + this.instagramUserName, '_blank').focus();
     }
 }
