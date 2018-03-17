@@ -2,15 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../Services/data.service';
 
 @Component({
-    selector: 'app-about',
-    templateUrl: './about.component.html',
-    styleUrls: ['./about.component.css']
+    selector: 'app-contact',
+    templateUrl: './contact.component.html',
+    styleUrls: ['./contact.component.css']
 })
-export class AboutComponent implements OnInit {
+export class ContactComponent implements OnInit {
 
     constructor(public dataService: DataService) { }
 
-    aboutTest: String = 'Hello About Me';
+    contact: String = 'Hello Contact';
 
     ngOnInit() {
 
