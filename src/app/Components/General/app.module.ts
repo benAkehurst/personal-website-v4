@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { DataService } from '../../Services/data.service';
 
 import keys from '../../Models/FrontEndKeys';
 
@@ -10,6 +12,7 @@ import { DevelopmentComponent } from './../DevelopmentComponent/development.comp
 import { ProjectsComponent } from './../ProjectsComponent/projects.component';
 import { InstagramComponent } from './../InstagramComponent/instagram.component';
 import { YoutubeComponent } from './../YoutubeComponent/youtube.component';
+import { ContactComponent } from './../ContactComponent/contact.component';
 
 
 @NgModule({
@@ -20,12 +23,14 @@ import { YoutubeComponent } from './../YoutubeComponent/youtube.component';
     DevelopmentComponent,
     ProjectsComponent,
     InstagramComponent,
-    YoutubeComponent
+    YoutubeComponent,
+    ContactComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../Services/data.service';
 
 @Component({
     selector: 'app-instagram',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InstagramComponent implements OnInit {
 
-    constructor() { }
+    constructor(public dataService: DataService) { }
 
     instagram: String = 'Hello instagram';
 
