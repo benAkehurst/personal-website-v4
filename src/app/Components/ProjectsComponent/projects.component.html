@@ -1,1 +1,8 @@
-<div>{{projetcts}}</div>
+<div class="projects-container">
+    <div class="single-project" *ngFor="let project of this.projects">
+        <span>{{project.name}}</span>
+        <span>{{project.image}}</span>
+        <span>{{project.description}}</span>
+        <span>{{project.techStack}}</span>
+    </div>
+</div>

@@ -10,7 +10,20 @@ export class ProjectsComponent implements OnInit {
 
     constructor(public dataService: DataService) { }
 
-    projetcts: String = 'Hello projects';
+    projects: Array<any> = [
+        {
+            name: 'test',
+            image: 'images/profilepic.jpg',
+            description: 'A test',
+            techStack: 'AngularJS, NodeJS'
+        },
+        {
+            name: 'test',
+            image: 'images/profilepic.jpg',
+            description: 'A test',
+            techStack: 'AngularJS, NodeJS'
+        }
+    ];
 
     ngOnInit() {
 
