@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { MaterialModule } from './material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DataService } from '../../Services/data.service';
 
 import keys from '../../Models/FrontEndKeys';
@@ -28,7 +30,9 @@ import { ContactComponent } from './../ContactComponent/contact.component';
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    MaterialModule,
+    BrowserAnimationsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
