@@ -1,0 +1,11 @@
+.personal-projects-contanier {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.single-project {
+    width: 33%;
+}
