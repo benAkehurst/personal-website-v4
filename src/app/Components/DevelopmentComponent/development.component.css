@@ -1,20 +1,28 @@
 .skills-div {
     display: flex;
     flex-direction: row;
+    margin-bottom: 25px;
 }
 
-.skill-container {
+.skill-container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 5% 0 5%;
+    margin: 0 5% 0 4.5%;
+}
+
+.secondary-skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 5% 0 4%;
 }
 
 .skill-html {
     color: #f06429;
 }
 
-.skill-css{
+.skill-css {
     color: #2965f1;
 }
 
@@ -26,7 +34,7 @@
     color: #dd0032;
 }
 
-.skill-node{
+.skill-node {
     color: #6cc24a;
 }
 
@@ -34,13 +42,11 @@
     color: #589636;
 }
 
-.secondary-skills{
-    margin-top: 25px;
-}
-.secondary-skills > li {
-    display: inline;
-}
-
-.seconday-skill-container {
-    margin: 0 2% 0 2%;
+.devicon-git-plain,
+.devicon-bootstrap-plain,
+.devicon-jquery-plain,
+.devicon-typescript-plain,
+.devicon-heroku-plain,
+.devicon-express-original {
+    font-size: 48px;
 }
