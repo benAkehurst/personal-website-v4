@@ -31,7 +31,7 @@ export class ProjectsComponent implements OnInit {
         {
             name: 'Playlistim',
             image: 'playlistim.png',
-            description: 'A test',
+            description: 'My first fullstack CRUD app built as part of my web dev studies.',
             techStack: 'AngularJS, NodeJS, MongoDB',
             githubLink: 'https://github.com/benAkehurst/playlistim-v2',
             liveDemoLink: 'https://www.youtube.com/embed/I0kNhqMoC3I'
@@ -39,7 +39,7 @@ export class ProjectsComponent implements OnInit {
         {
             name: 'Hanoi',
             image: 'hanoi.jpg',
-            description: 'A test',
+            description: 'A mockup website for a resturant in Tel Aviv.',
             techStack: 'AngularJS',
             githubLink: 'https://github.com/benAkehurst/hanoi-website-mockup',
             liveDemoLink: 'https://benakehurst.github.io/hanoi-website-mockup/#!/'
@@ -47,7 +47,7 @@ export class ProjectsComponent implements OnInit {
         {
             name: 'Gif Search',
             image: 'gifSearch.jpeg',
-            description: 'A test',
+            description: 'Using the Giphy API, you can search GIFS.',
             techStack: 'AngularJS',
             githubLink: 'https://github.com/benAkehurst/gif-search',
             liveDemoLink: 'https://benakehurst.github.io/gif-search/#!/'
@@ -55,36 +55,24 @@ export class ProjectsComponent implements OnInit {
         {
             name: 'Unique Password Generator',
             image: 'passwordgenerator.jpg',
-            description: 'A test',
+            description: 'A random passowrd generator with strength checker.',
             techStack: 'AngularJS',
             githubLink: 'https://github.com/benAkehurst/password-generator',
             liveDemoLink: 'https://password-generator-e6136.firebaseapp.com/#!/'
-        }
-    ];
-    professionalWork: Array<any> = [
-        {
-            client: 'Company A',
-            theme : 'Cyber Security SaaS',
-            technology: 'AngularJS',
-            role: 'Team Member'
-        },
-        {
-            client: 'Maccabi Haifa FC',
-            theme: 'Website Re-design',
-            technology: 'CSS',
-            role: 'Team Member'
-        },
-        {
-            client: 'Company W',
-            theme: 'Socail Networking Forum',
-            technology: 'Angular, NodeJS, MongoDB, AWS',
-            role: 'Team Lead'
         }
     ];
     gitHubUrl = 'https://github.com/benAkehurst';
 
     ngOnInit() {
 
+    }
+
+    goToGithubPoject(projectGithubUrl) {
+        window.open(projectGithubUrl, '_blank').focus();
+    }
+
+    goToLiveProject(projectUrl) {
+        window.open(projectUrl, '_blank').focus();
     }
 
     goToGitHub() {

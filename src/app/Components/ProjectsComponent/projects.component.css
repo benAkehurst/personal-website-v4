@@ -1,3 +1,7 @@
+.projects-container {
+    margin-bottom: 25px;
+}
+
 .personal-projects-contanier {
     width: 100%;
     display: flex;
@@ -8,4 +12,25 @@
 
 .single-project {
     width: 33%;
+}
+
+.project-card {
+    height: 100%;
+}
+
+.project-name {
+    font-weight: 700;
+}
+
+.project-description {
+    word-spacing: 2%
+}
+
+.project-tech-stack {
+    font-weight: 800;
+}
+
+.link-to-project:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }

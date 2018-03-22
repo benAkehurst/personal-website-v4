@@ -1,24 +1,16 @@
 <div class="projects-container">
     <p>Here are some of the select personal projects I've built:</p>
+    <p>See <span class="link-to-github" (click)="goToGitHub()">my Github</span> for more projects.</p>
     <div class="personal-projects-contanier">
         <div class="single-project" *ngFor="let project of this.projects">
             <mat-card class="project-card">
-                <span>{{project.name}}</span>
+                <span (click)="goToGithubPoject(project.githubLink)" class="project-name">{{project.name}}</span>
                 <img class="img-fluid" src="assets/images/{{project.image}}" alt="{{project.name}} thumbnail">
-                <span>{{project.description}}</span>
-                <span>{{project.techStack}}</span>
-            </mat-card>
-        </div>
-    </div>
-    <p>See <span class="link-to-github" (click)="goToGitHub()">my Github</span> for more projects.</p>
-    <div class="proffesional-projects-container">
-        <p>During my carrer so far I have worked on a number of dirrefent projects, including:</p>
-        <div class="single-proffesional-project" *ngFor="let project of this.professionalWork">
-            <mat-card class="proffesional-project-card">
-                <span>{{project.client}}</span>
-                <span>{{project.theme}}</span>
-                <span>{{project.technology}}</span>
-                <span>{{project.role}}</span>
+                <span class="project-description">{{project.description}}</span>
+                <br><br>
+                <span class="project-tech-stack">Tech Stack: {{project.techStack}}</span>
+                <br><br>
+                <span class="link-to-project" (click)="goToLiveProject(project.liveDemoLink)">Try it out!</span>
             </mat-card>
         </div>
     </div>
