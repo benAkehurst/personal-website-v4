@@ -1,3 +1,7 @@
+.development-container {
+    margin-bottom: 25px;
+}
+
 .skills-div {
     display: flex;
     flex-direction: row;
