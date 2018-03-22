@@ -1,5 +1,6 @@
 .instagram-component-container {
     width: 100%;
+    margin-bottom: 25px;
 }
 
 .link-to-instagram:hover {
@@ -15,7 +16,7 @@
 }
 
 .single-image {
-    width: 250px;
+    width: 270px;
     height: 250px;
-    margin: 10px;
+    margin: 15px;
 }
