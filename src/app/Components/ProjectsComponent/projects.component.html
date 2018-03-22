@@ -10,7 +10,7 @@
             </mat-card>
         </div>
     </div>
-    <p>See <span class="link-to-github">my Github</span> for more projects.</p>
+    <p>See <span class="link-to-github" (click)="goToGitHub()">my Github</span> for more projects.</p>
     <div class="proffesional-projects-container">
         <p>During my carrer so far I have worked on a number of dirrefent projects, including:</p>
         <div class="single-proffesional-project" *ngFor="let project of this.professionalWork">

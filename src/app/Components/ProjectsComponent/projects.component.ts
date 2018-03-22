@@ -13,51 +13,52 @@ export class ProjectsComponent implements OnInit {
     projects: Array<any> = [
         {
             name: 'Munch',
-            image: 'images/profilepic.jpg',
-            description: 'A test',
+            image: 'munch.jpeg',
+            // tslint:disable-next-line:max-line-length
+            description: 'It\'s still a work in progress, but this app is designed to show you a route of places to go out relative to your location.',
             techStack: 'Angular, NodeJS',
-            githubLink: '',
+            githubLink: 'https://github.com/benAkehurst/food-search-v2',
             liveDemoLink: ''
         },
         {
             name: 'Random Colors',
-            image: 'images/profilepic.jpg',
-            description: 'A test',
+            image: 'randomColors.gif',
+            description: 'I built this app for a youtube video tutorial, but when you hit space you get a new random color.',
             techStack: 'HTML, CSS, Javascript',
-            githubLink: '',
-            liveDemoLink: ''
+            githubLink: 'https://github.com/benAkehurst/randomColorsPro',
+            liveDemoLink: 'https://benakehurst.github.io/randomColorsPro/'
         },
         {
             name: 'Playlistim',
-            image: 'images/profilepic.jpg',
+            image: 'playlistim.png',
             description: 'A test',
             techStack: 'AngularJS, NodeJS, MongoDB',
-            githubLink: '',
-            liveDemoLink: ''
+            githubLink: 'https://github.com/benAkehurst/playlistim-v2',
+            liveDemoLink: 'https://www.youtube.com/embed/I0kNhqMoC3I'
         },
         {
             name: 'Hanoi',
             image: 'hanoi.jpg',
             description: 'A test',
             techStack: 'AngularJS',
-            githubLink: '',
-            liveDemoLink: ''
+            githubLink: 'https://github.com/benAkehurst/hanoi-website-mockup',
+            liveDemoLink: 'https://benakehurst.github.io/hanoi-website-mockup/#!/'
         },
         {
             name: 'Gif Search',
-            image: 'images/profilepic.jpg',
+            image: 'gifSearch.jpeg',
             description: 'A test',
             techStack: 'AngularJS',
-            githubLink: '',
-            liveDemoLink: ''
+            githubLink: 'https://github.com/benAkehurst/gif-search',
+            liveDemoLink: 'https://benakehurst.github.io/gif-search/#!/'
         },
         {
             name: 'Unique Password Generator',
-            image: 'images/profilepic.jpg',
+            image: 'passwordgenerator.jpg',
             description: 'A test',
             techStack: 'AngularJS',
-            githubLink: '',
-            liveDemoLink: ''
+            githubLink: 'https://github.com/benAkehurst/password-generator',
+            liveDemoLink: 'https://password-generator-e6136.firebaseapp.com/#!/'
         }
     ];
     professionalWork: Array<any> = [
@@ -65,24 +66,29 @@ export class ProjectsComponent implements OnInit {
             client: 'Company A',
             theme : 'Cyber Security SaaS',
             technology: 'AngularJS',
-            role: 'team member'
+            role: 'Team Member'
         },
         {
             client: 'Maccabi Haifa FC',
             theme: 'Website Re-design',
             technology: 'CSS',
-            role: 'team member'
+            role: 'Team Member'
         },
         {
             client: 'Company W',
             theme: 'Socail Networking Forum',
             technology: 'Angular, NodeJS, MongoDB, AWS',
-            role: 'team leader'
+            role: 'Team Lead'
         }
     ];
+    gitHubUrl = 'https://github.com/benAkehurst';
 
     ngOnInit() {
 
+    }
+
+    goToGitHub() {
+        window.open(this.gitHubUrl, '_blank').focus();
     }
 
 }
