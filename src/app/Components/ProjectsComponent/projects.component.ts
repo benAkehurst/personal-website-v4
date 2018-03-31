@@ -16,9 +16,17 @@ export class ProjectsComponent implements OnInit {
             image: 'munch.jpeg',
             // tslint:disable-next-line:max-line-length
             description: 'It\'s still a work in progress, but this app is designed to show you a route of places to go out relative to your location.',
-            techStack: 'Angular, NodeJS',
+            techStack: 'Angular, NodeJS, Heroku',
             githubLink: 'https://github.com/benAkehurst/food-search-v2',
-            liveDemoLink: ''
+            liveDemoLink: 'https://munch-location.herokuapp.com/'
+        },
+        {
+          name: 'Antique Adventures Database',
+          image: 'antiqueAdventures.png',
+          description: 'Antique adventures is a peice of full stack inventory software for a small business in London.',
+          techStack: 'Angular, NodeJS, Heroku',
+          githubLink: 'https://github.com/benAkehurst/antique-adventures',
+          liveDemoLink: 'https://antique-adventures-v2.herokuapp.com/home'
         },
         {
             name: 'Random Colors',
@@ -59,7 +67,7 @@ export class ProjectsComponent implements OnInit {
             techStack: 'AngularJS',
             githubLink: 'https://github.com/benAkehurst/password-generator',
             liveDemoLink: 'https://password-generator-e6136.firebaseapp.com/#!/'
-        }
+      }
     ];
     gitHubUrl = 'https://github.com/benAkehurst';
 

@@ -4,7 +4,7 @@
     <div class="personal-projects-contanier">
         <div class="single-project" *ngFor="let project of this.projects">
             <mat-card class="project-card">
-                <span (click)="goToGithubPoject(project.githubLink)" class="project-name">{{project.name}}</span>
+                <span class="link-to-project" (click)="goToGithubPoject(project.githubLink)" class="project-name">{{project.name}}</span>
                 <img class="img-fluid" src="assets/images/{{project.image}}" alt="{{project.name}} thumbnail">
                 <span class="project-description">{{project.description}}</span>
                 <br><br>
