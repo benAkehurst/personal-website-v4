@@ -4,7 +4,7 @@ import { DataService } from '../../Services/data.service';
 @Component({
     selector: 'app-youtube',
     templateUrl: './youtube.component.html',
-    styleUrls: ['./youtube.component.css']
+    styleUrls: ['./youtube.component.scss']
 })
 export class YoutubeComponent implements OnInit {
 
