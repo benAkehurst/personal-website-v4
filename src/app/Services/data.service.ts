@@ -14,18 +14,6 @@ export class DataService {
     constructor(private http: Http) { }
 
     //
-    // ─── INSTAGRAM ──────────────────────────────────────────────────────────────────
-    //
-    public getInstagramPhotos() {
-        return this.http
-            .get('https://www.instagram.com/thatbritisraeli/?__a=1')
-            .map(res => res.json());
-    }
-    //
-    // ──────────────────────────────────────────────────────────────── INSTAGRAM ─────
-    //
-
-    //
     // ─── YOUTUBE ────────────────────────────────────────────────────────────────────
     //
     public getYoutueSubCount() {
