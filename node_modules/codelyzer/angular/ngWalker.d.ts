@@ -1,15 +1,15 @@
+import * as compiler from '@angular/compiler';
 import * as Lint from 'tslint';
 import * as ts from 'typescript';
-import * as compiler from '@angular/compiler';
-import { CssAst } from './styles/cssAst';
-import { CssAstVisitorCtrl } from './styles/basicCssAstVisitor';
-import { RecursiveAngularExpressionVisitorCtr, TemplateAstVisitorCtr } from './templates/basicTemplateAstVisitor';
-import { MetadataReader } from './metadataReader';
 import { ComponentMetadata, DirectiveMetadata, StyleMetadata } from './metadata';
+import { MetadataReader } from './metadataReader';
+import { CssAstVisitorCtrl } from './styles/basicCssAstVisitor';
+import { CssAst } from './styles/cssAst';
+import { RecursiveAngularExpressionVisitorCtr, TemplateAstVisitorCtr } from './templates/basicTemplateAstVisitor';
 export interface NgWalkerConfig {
+    cssVisitorCtrl?: CssAstVisitorCtrl;
     expressionVisitorCtrl?: RecursiveAngularExpressionVisitorCtr;
     templateVisitorCtrl?: TemplateAstVisitorCtr;
-    cssVisitorCtrl?: CssAstVisitorCtrl;
 }
 export declare class NgWalker extends Lint.RuleWalker {
     protected _originalOptions: Lint.IOptions;

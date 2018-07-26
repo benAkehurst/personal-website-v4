@@ -24,8 +24,7 @@ var getExpressionDisplacement = function (binding) {
         binding instanceof ast.BoundDirectivePropertyAst) {
         var subBindingLen = 0;
         if (binding instanceof ast.BoundElementPropertyAst) {
-            var prop = binding;
-            switch (prop.type) {
+            switch (binding.type) {
                 case ast.PropertyBindingType.Animation:
                     subBindingLen = 'animate'.length + 1;
                     break;
@@ -57,8 +56,7 @@ var getExpressionDisplacement = function (binding) {
         else {
             valLen = binding.value.span.end;
         }
-        if (!(binding instanceof ast.BoundDirectivePropertyAst) ||
-            (binding.templateName !== 'ngForOf' && binding.templateName !== 'ngIf')) {
+        if (!(binding instanceof ast.BoundDirectivePropertyAst) || (binding.templateName !== 'ngForOf' && binding.templateName !== 'ngIf')) {
             totalLength = binding.sourceSpan.end.offset - binding.sourceSpan.start.offset;
             var whitespace = totalLength - (attrLen + valLen) - 1;
             result = whitespace + attrLen + binding.sourceSpan.start.offset;

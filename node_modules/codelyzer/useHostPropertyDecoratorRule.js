@@ -16,23 +16,24 @@ var Rule = (function (_super) {
     function Rule(options) {
         return _super.call(this, {
             decoratorName: ['HostBindings', 'HostListeners'],
-            propertyName: 'host',
-            errorMessage: 'Use @HostBindings and @HostListeners instead of the host property (https://angular.io/styleguide#style-06-03)'
+            errorMessage: Rule.FAILURE_STRING,
+            propertyName: 'host'
         }, options) || this;
     }
     Rule.metadata = {
-        ruleName: 'use-host-property-decorator',
-        type: 'style',
         description: 'Use @HostProperty decorator rather than the `host` property of `@Component` and `@Directive` metadata.',
         descriptionDetails: 'See more at https://angular.io/styleguide#style-06-03.',
-        rationale: 'The property associated with `@HostBinding` or the method associated with `@HostListener` ' +
-            'can be modified only in a single place: in the directive\'s class. If you use the `host` metadata ' +
-            'property, you must modify both the property declaration inside the controller, and the metadata ' +
-            'associated with the directive.',
         options: null,
         optionsDescription: 'Not configurable.',
-        typescriptOnly: true,
+        rationale: 'The property associated with `@HostBinding` or the method associated with `@HostListener` ' +
+            "can be modified only in a single place: in the directive's class. If you use the `host` metadata " +
+            'property, you must modify both the property declaration inside the controller, and the metadata ' +
+            'associated with the directive.',
+        ruleName: 'use-host-property-decorator',
+        type: 'style',
+        typescriptOnly: true
     };
+    Rule.FAILURE_STRING = 'Use @HostBindings and @HostListeners instead of the host property (https://angular.io/styleguide#style-06-03)';
     return Rule;
 }(propertyDecoratorBase_1.UsePropertyDecorator));
 exports.Rule = Rule;

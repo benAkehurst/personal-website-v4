@@ -3,7 +3,7 @@ import { RuleWalker, RuleFailure, IOptions, Fix, Replacement } from 'tslint';
 import { CodeWithSourceMap } from './metadata';
 export declare function isLineBreak(ch: number): boolean;
 export declare class SourceMappingVisitor extends RuleWalker {
-    protected codeWithMap: CodeWithSourceMap;
+    codeWithMap: CodeWithSourceMap;
     protected basePosition: number;
     parentAST: any;
     private consumer;

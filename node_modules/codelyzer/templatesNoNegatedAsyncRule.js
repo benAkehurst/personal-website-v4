@@ -27,24 +27,26 @@ var TemplateToNgTemplateVisitor = (function (_super) {
         if (!(expr.right instanceof ast.LiteralPrimitive) || expr.right.value !== false || expr.operation !== unstrictEqualityOperator) {
             return _super.prototype.visitBinary.call(this, expr, context);
         }
-        var operator = this.codeWithMap.code.slice(expr.left.span.end, expr.right.span.start);
-        var operatorStart = (/^.*==/).exec(operator)[0].length - unstrictEqualityOperator.length;
-        this.addFailure(this.createFailure(expr.span.start, expr.span.end - expr.span.start, 'Async pipes must use strict equality `===` when comparing with `false`', [
-            new Lint.Replacement(this.getSourcePosition(expr.left.span.end) + operatorStart, unstrictEqualityOperator.length, '==='),
-        ]));
+        var endLeftSpan = expr.left.span.end, startRightSpan = expr.right.span.start, _a = expr.span, spanEnd = _a.end, spanStart = _a.start;
+        var operator = this.codeWithMap.code.slice(endLeftSpan, startRightSpan);
+        var operatorStart = /^.*==/.exec(operator)[0].length - unstrictEqualityOperator.length;
+        this.addFailureFromStartToEnd(spanStart, spanEnd, 'Async pipes must use strict equality `===` when comparing with `false`', [
+            new Lint.Replacement(this.getSourcePosition(endLeftSpan) + operatorStart, unstrictEqualityOperator.length, '===')
+        ]);
+        _super.prototype.visitBinary.call(this, expr, context);
     };
     TemplateToNgTemplateVisitor.prototype.visitPrefixNot = function (expr, context) {
         if (!this.isAsyncBinding(expr.expression)) {
             return _super.prototype.visitPrefixNot.call(this, expr, context);
         }
-        var width = expr.span.end - expr.span.start;
-        var absoluteStart = this.getSourcePosition(expr.span.start);
-        var expressionSource = this.codeWithMap.code.slice(expr.span.start, expr.span.end);
-        var concreteWidth = width - (/ *$/).exec(expressionSource)[0].length;
-        this.addFailure(this.createFailure(expr.span.start, width, 'Async pipes can not be negated, use (observable | async) === false instead', [
+        var _a = expr.span, spanEnd = _a.end, spanStart = _a.start;
+        var absoluteStart = this.getSourcePosition(spanStart);
+        var expressionSource = this.codeWithMap.code.slice(spanStart, spanEnd);
+        var concreteWidth = spanEnd - spanStart - / *$/.exec(expressionSource)[0].length;
+        this.addFailureFromStartToEnd(spanStart, spanEnd, 'Async pipes can not be negated, use (observable | async) === false instead', [
             new Lint.Replacement(absoluteStart + concreteWidth, 1, ' === false '),
-            new Lint.Replacement(absoluteStart, 1, ''),
-        ]));
+            new Lint.Replacement(absoluteStart, 1, '')
+        ]);
     };
     TemplateToNgTemplateVisitor.prototype.isAsyncBinding = function (expr) {
         return expr instanceof ast.BindingPipe && expr.name === 'async';
@@ -64,7 +66,7 @@ var Rule = (function (_super) {
     Rule.metadata = {
         ruleName: 'templates-no-negated-async',
         type: 'functionality',
-        description: 'Ensures that strict equality is used when evaluating negations on async pipe outout.',
+        description: 'Ensures that strict equality is used when evaluating negations on async pipe output.',
         rationale: 'Async pipe evaluate to `null` before the observable or promise emits, which can lead to layout thrashing as' +
             ' components load. Prefer strict `=== false` checks instead.',
         options: null,

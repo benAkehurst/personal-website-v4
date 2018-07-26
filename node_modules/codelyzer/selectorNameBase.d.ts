@@ -1,7 +1,6 @@
+import * as compiler from '@angular/compiler';
 import * as Lint from 'tslint';
 import * as ts from 'typescript';
-import * as compiler from '@angular/compiler';
-import { IOptions } from 'tslint';
 export declare type SelectorType = 'element' | 'attribute';
 export declare type SelectorTypeInternal = 'element' | 'attrs';
 export declare type SelectorStyle = 'kebab-case' | 'camelCase';
@@ -10,7 +9,7 @@ export declare abstract class SelectorRule extends Lint.Rules.AbstractRule {
     prefixes: string[];
     types: SelectorTypeInternal[];
     style: SelectorStyle[];
-    constructor(options: IOptions);
+    constructor(options: Lint.IOptions);
     validateType(selectors: compiler.CssSelector[]): boolean;
     validateStyle(selectors: compiler.CssSelector[]): boolean;
     validatePrefix(selectors: compiler.CssSelector[]): boolean;
@@ -27,6 +26,5 @@ export declare class SelectorValidatorWalker extends Lint.RuleWalker {
     private validateDecorator(className, decorator);
     private validateSelector(className, arg);
     private validateProperty(p);
-    private isSupportedKind(kind);
-    private extractMainSelector(i);
+    private extractMainSelector(expression);
 }
