@@ -1,0 +1,115 @@
+{
+  "basics": {
+    "name": "Ben Akehurst",
+    "label": "Full Stack Web Developer",
+    "picture": "",
+    "email": "",
+    "phone": "",
+    "website": "http://benakehurst.online",
+    "summary": "",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "",
+      "region": ""
+    },
+    "profiles": [{
+        "network": "Linkedin",
+        "username": "",
+        "url": ""
+      },
+      {
+        "network": "Github",
+        "username": "",
+        "url": ""
+      }
+    ]
+  },
+  "work": [{
+      "company": "Moveo Software",
+      "position": "Full Stack Web Developer",
+      "website": "https://www.moveo.group",
+      "startDate": "2017-12",
+      "endDate": "2018 - 08",
+      "summary": "",
+      "highlights": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "company": "Athena",
+      "position": "Front End Web Developer",
+      "website": "http://www.athenaiss.com/",
+      "startDate": "2017 - 04",
+      "endDate": "2017-12",
+      "summary": "",
+      "highlights": [
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [{
+    "institution": "John Bryce Technology College",
+    "area": "Full Stack Web Development",
+    "studyType": "Professional Course",
+    "startDate": "2016 - 07",
+    "endDate": "2017 - 04",
+    "gpa": "89",
+    "courses": []
+  }],
+  "awards": [],
+  "publications": [],
+  "skills": [{
+    "name": "Web Development",
+    "level": "",
+    "keywords": [
+      "HTML",
+      "CSS",
+      "Javascript - ECMA6",
+      "Angular",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "jQuery",
+      "TypeScript",
+      "AWS",
+      "Heroku",
+      "Firebase"
+    ]
+  }],
+  "languages": [{
+      "language": "English",
+      "fluency": "Mother Tounge"
+    },
+    {
+      "language": "Hebrew",
+      "fluency": "Fluent"
+    }
+  ],
+  "interests": [{
+      "name": "Photography",
+      "keywords": [
+        "Architecture",
+        "Street Photography"
+      ]
+    },
+    {
+      "name": "Youtube Content Creation",
+      "keywords": [
+        "Short Film Production",
+        "Editing",
+        "SEO"
+      ]
+    }
+  ],
+  "references": [{
+    "name": "",
+    "reference": ""
+  }]
+}
