@@ -8,10 +8,22 @@ import { DataService } from '../../Services/data.service';
 })
 export class ResumeComponent implements OnInit {
 
-  constructor(public dataService: DataService) { }
+  resume: Object = {};
 
-  ngOnInit() {
-
+  constructor(public dataService: DataService) {
+    if (!this.resume) {
+      this.resume = {};
+    }
   }
 
+  ngOnInit() {
+    this.getResumeJSON();
+  }
+
+  public getResumeJSON() {
+    this.dataService.getResumeData()
+      .subscribe(res => {
+        this.resume = res;
+      });
+  }
 }

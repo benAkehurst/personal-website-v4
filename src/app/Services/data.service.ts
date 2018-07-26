@@ -17,12 +17,34 @@ export class DataService {
     // ─── YOUTUBE ────────────────────────────────────────────────────────────────────
     //
     public getYoutueSubCount() {
-        return this.http
-            .get('https://www.googleapis.com/youtube/v3/channels?part=statistics&forUsername=ClicheProductionsUK&fields=items/statistics/subscriberCount&key=' + keys.YOUTUBE_KEY)
-            .map(res => res.json());
+      return this.http
+        .get('https://www.googleapis.com/youtube/v3/channels?part=statistics&forUsername=ClicheProductionsUK&fields=items/statistics/subscriberCount&key=' + keys.YOUTUBE_KEY)
+        .map(res => res.json());
     }
     //
     // ────────────────────────────────────────────────────────────────── YOUTUBE ─────
+    //
+
+    //
+    // ─── SKILLS ──────────────────────────────────────────────────────
+    //
+    public getSkillsData() {
+      return this.http.get('../assets/data/skills.json')
+        .map(res => res.json());
+    }
+    //
+    // ──────────────────────────────────────────────────── SKILLS ─────
+    //
+
+    //
+    // ─── RESUME ──────────────────────────────────────────────────────
+    //
+    public getResumeData() {
+      return this.http.get('../assets/data/resume.json')
+        .map(res => res.json());
+    }
+    //
+    // ──────────────────────────────────────────────────── RESUME ─────
     //
 
 }
