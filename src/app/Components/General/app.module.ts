@@ -15,6 +15,7 @@ import { ProjectsComponent } from './../ProjectsComponent/projects.component';
 import { InstagramComponent } from './../InstagramComponent/instagram.component';
 import { YoutubeComponent } from './../YoutubeComponent/youtube.component';
 import { ContactComponent } from './../ContactComponent/contact.component';
+import { ResumeComponent } from './../ResumeComponent/resume.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ContactComponent } from './../ContactComponent/contact.component';
     ProjectsComponent,
     InstagramComponent,
     YoutubeComponent,
-    ContactComponent
+    ContactComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,
