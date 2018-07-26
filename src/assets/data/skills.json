@@ -1,0 +1,13 @@
+{
+  "HTML": ["Semantic Markup", "Cross browser compatability", "Modern HTML5 tags and uses", "Accesability Markup"],
+  "CSS and UX": ["Sass", "Flexbox", "Bootstrap", "Responsive Design", "Mobile First Design", "Angular Material design framework", "Materialize library"],
+  "Javascipt": ["ECMA6 Script", "Vanilla Javascript", "TypeScript"],
+  "Front End Frameworks": ["Angular (versions 2 - 6)", "AngularJS (version 1.6)"],
+  "Modern Front End Technologies" : ["NPM", "Webpack", "Command Line"],
+  "Libraries": ["jQuery", "Lodash", "Moment", "and many more."],
+  "Backend": ["Node.js", "Express", "MongoDB", "Mongoose", "ejs"],
+  "DevOps": ["AWS - launching instances and running ubuntu/nginx servers, S3, Route 53", "Heroku - launching instances from Git", "Firebase - real time databases and storage"],
+  "Version Control": ["Git", "Github"],
+  "Soft Skills": ["Team management and leadership - I have lead teams of up to 5 in the past", "Client Communication - Able to communicate with clients comfortably and explain technical concepts in a nontechnical way"],
+  "General Skills" : ["JIRA", "Agile/Scrum", "Trello", "Slack", "Asana"]
+}
