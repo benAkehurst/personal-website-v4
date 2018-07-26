@@ -5,12 +5,28 @@
       <app-about></app-about>
     </div>
     <div class="information-div info-div">
-      <app-introduction></app-introduction>
-      <app-development></app-development>
+      <mat-tab-group>
+        <mat-tab label="About Me">
+          <app-introduction></app-introduction>
+        </mat-tab>
+        <mat-tab label="Programming Skills">
+          <app-development></app-development>
+          <app-projects></app-projects>
+        </mat-tab>
+        <mat-tab label="Resume">
+          <app-resume></app-resume>
+        </mat-tab>
+        <mat-tab label="Hobbies">
+          <app-instagram></app-instagram>
+          <app-youtube></app-youtube>
+        </mat-tab>
+      </mat-tab-group>
+      <!-- <app-introduction></app-introduction> -->
+      <!-- <app-development></app-development>
       <app-projects></app-projects>
       <app-instagram></app-instagram>
       <app-youtube></app-youtube>
-      <app-contact></app-contact>
+      <app-contact></app-contact> -->
     </div>
   </main>
   <footer></footer>
