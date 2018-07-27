@@ -23,7 +23,12 @@ export class ResumeComponent implements OnInit {
   public getResumeJSON() {
     this.dataService.getResumeData()
       .subscribe(res => {
-        this.resume = res;
+        this.resume = res.work;
+        console.log(this.resume);
       });
+  }
+
+  public goToWebsite(url: string) {
+    window.open(url, '_blank').focus();
   }
 }
