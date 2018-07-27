@@ -1,49 +1,49 @@
 .development-container {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .skills-div {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 25px;
 }
 
-.skill-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 5% 0 4.5%;
+.skill-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5% 0 4.5%;
 }
 
 .secondary-skills-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 5% 0 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5% 0 4%;
 }
 
 .skill-html {
-    color: #f06429;
+  color: #f06429;
 }
 
 .skill-css {
-    color: #2965f1;
+  color: #2965f1;
 }
 
 .skill-javascript {
-    color: #f7df1e;
+  color: #f7df1e;
 }
 
 .skill-angular {
-    color: #dd0032;
+  color: #dd0032;
 }
 
 .skill-node {
-    color: #6cc24a;
+  color: #6cc24a;
 }
 
 .skill-mongo {
-    color: #589636;
+  color: #589636;
 }
 
 .devicon-git-plain,
@@ -52,5 +52,34 @@
 .devicon-typescript-plain,
 .devicon-heroku-plain,
 .devicon-express-original {
-    font-size: 48px;
+  font-size: 48px;
+}
+.fa-2x {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .skills-div {
+    max-width: 200px;
+  }
+
+  .skills-div > .skill-container > span {
+    display: none;
+  }
+
+  .skills-div>.secondary-skills-container>span {
+    display: none;
+  }
+
+  .fa-3x {
+    display: none;
+  }
+
+  .fa-2x {
+    display: inline;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
 }

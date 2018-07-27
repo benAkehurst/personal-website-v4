@@ -8,7 +8,7 @@ import { DataService } from '../../Services/data.service';
 })
 export class DevelopmentComponent implements OnInit {
   development: String = 'Hello Development';
-  skillsData: Object = {};
+  skillsData: any;
 
   constructor(public dataService: DataService) {
     if (!this.skillsData) {
@@ -17,13 +17,14 @@ export class DevelopmentComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getSkillsJSON();
+    // this.getSkillsJSON();
   }
 
   public getSkillsJSON() {
     this.dataService.getSkillsData()
       .subscribe(res => {
         this.skillsData = res;
+        console.log(this.skillsData);
       });
   }
 
