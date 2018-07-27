@@ -5,7 +5,7 @@
       <app-about></app-about>
     </div>
     <div class="information-div info-div">
-      <mat-tab-group>
+      <mat-tab-group [disableRipple]=true>
         <mat-tab label="About Me">
           <app-introduction></app-introduction>
         </mat-tab>
@@ -21,12 +21,6 @@
           <app-youtube></app-youtube>
         </mat-tab>
       </mat-tab-group>
-      <!-- <app-introduction></app-introduction> -->
-      <!-- <app-development></app-development>
-      <app-projects></app-projects>
-      <app-instagram></app-instagram>
-      <app-youtube></app-youtube>
-      <app-contact></app-contact> -->
     </div>
   </main>
   <footer></footer>
