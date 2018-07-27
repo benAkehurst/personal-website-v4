@@ -47,8 +47,8 @@
 /* Create four equal columns that floats next to each other */
 
 .info-div {
-    float: left;
-} 
+  float: left;
+}
 
 /* On screens that are 992px wide or less, go from four columns to two columns */
 
@@ -62,7 +62,7 @@
 
 @media screen and (max-width: 600px) {
   .info-div {
-    margin-bottom: 50%;
+    margin-bottom: 81%;
     width: 100%;
   }
 }

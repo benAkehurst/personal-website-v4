@@ -54,6 +54,7 @@
 .devicon-express-original {
   font-size: 48px;
 }
+
 .fa-2x {
   display: none;
 }
@@ -62,23 +63,18 @@
   .skills-div {
     max-width: 200px;
   }
-
-  .skills-div > .skill-container > span {
+  .skills-div>.skill-container>span {
     display: none;
   }
-
   .skills-div>.secondary-skills-container>span {
     display: none;
   }
-
   .fa-3x {
     display: none;
   }
-
   .fa-2x {
     display: inline;
   }
-
   .hide-mobile {
     display: none;
   }
